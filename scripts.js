@@ -1,5 +1,17 @@
 import { BOOKS_PER_PAGE, authors, genres, books} from './data.js'
 
+// if (!books && !Array.isArray(books)) {
+//     throw new Error('Source required') 
+// }
+// if (!range && range.length < 2) {
+//     throw new Error('Range must be an array with two numbers')
+// }
+
+/* if (!books && !Array.isArray(books)) throw new Error('Source required') 
+if (!range && range.length < 2) throw new Error('Range must be an array with two numbers')
+*/
+
+
 window.scrollTo({ top: 0, behavior: 'smooth' });
 
 //Html object reference
@@ -39,15 +51,6 @@ const html = {
 
 const matches = books
 let page = 1;
-
-// if (!books && !Array.isArray(books)) {
-//     throw new Error('Source required') 
-// }
-// if (!range && range.length < 2) {
-//     throw new Error('Range must be an array with two numbers')
-// }
-
-
 
 // This function will take an object as an argument and create HTMl for book to be display
      const createPreview = (props) => {
@@ -389,4 +392,10 @@ html.search.form.addEventListener('submit', filtersHandler)
 
 html.preview.close.addEventListener('click', handleBookPreviewClose)
 
-// fixed snytax
+/*
+ * defines a function that handles a click event on a data search form.
+ * It prevents the default form behavior, extracts form data, and converts it to an object.
+ * It loops over a list of books, checking whether each book meets filter criteria for title, author, and genre.
+ * If a book meets all criteria, it is added to a result array.
+ * Once all books have been checked, the function returns the result array.
+ */
