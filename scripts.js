@@ -1,11 +1,6 @@
 import { BOOKS_PER_PAGE, authors, genres, books} from './data.js'
 
-// if (!books && !Array.isArray(books)) {
-//     throw new Error('Source required') 
-// }
-// if (!range && range.length < 2) {
-//     throw new Error('Range must be an array with two numbers')
-// }
+// this is a JavaScript file that is importing data from a separate file named "data.js"./
 
 /* if (!books && !Array.isArray(books)) throw new Error('Source required') 
 if (!range && range.length < 2) throw new Error('Range must be an array with two numbers')
@@ -131,10 +126,11 @@ for (const [id, authorValue] of Object.entries(authors)) {
 // const authorSelect = document.querySelector('[data-search-authors]')
 html.search.author.appendChild(authorsFrag)
 
-
-
-
 // toggle dark and light mode
+
+// this is section of code that toggles between a dark and light theme. 
+// depending on the user's preference.
+
 const css = { 
 day: {
     dark: '10, 10, 20',
@@ -146,14 +142,12 @@ night :{
     light: '10, 10, 20',
 }
 }
-// *************Code I need to figure out *************
 // themeValue === window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'day'
 // const v = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' | 'day'
 
 // //The setProperty() method sets a new or modifies an existing CSS property in a CSS declaration block.
 // documentElement.style.setProperty('--color-dark', css[v].dark);
 // documentElement.style.setProperty('--color-light', css[v].light);
-// *************Code I need to figure out above *************
 
 // const themeValue = document.querySelector('[data-settings-theme]').value
 
@@ -197,7 +191,6 @@ html.list.button.addEventListener('click', function () {
  })
  
 
-//---------------------------------------------------------
 // const listButton = document.querySelector('[data-list-button]')
 
 // const booksRemaining = books.length - BOOKS_PER_PAGE
@@ -228,7 +221,7 @@ html.list.button.addEventListener('click', function () {
 //    listButton.innerHTML = /* html */ `
 //         <span>Show more</span>
 //         <span class="list__remaining"> (${remaining})</span>`
-//--------------------------------------------------
+
 
 
 
@@ -292,8 +285,6 @@ const filtersHandler = (event) => {
         }
 
     }
-
-
     //   const allItems = html.list.item.querySelectorAll('.preview')
 
     //   for (const item of allItems){
@@ -310,8 +301,8 @@ const filtersHandler = (event) => {
              html.list.button.disabled = false
         }
 // // if the results of the filtered books are less than the required 36 books
-//         if (results.length < BOOKS_PER_PAGE) {
-//             html.list.item.appendChild(createPreviewFragment(results, BOOKS_PER_PAGE, page))
+//  if (results.length < BOOKS_PER_PAGE) {
+//     html.list.item.appendChild(createPreviewFragment(results, BOOKS_PER_PAGE, page))
 
 //         } else {
 
@@ -375,7 +366,7 @@ const handleBookPreviewClose = (event) => {
 
 html.settings.form.addEventListener('submit', settingsSubmitHandler) //toggling dark and light mode
 
-// ***EVENT LISTENERS **
+
 const searchCancel = document.querySelector('[data-search-cancel]')
 html.search.cancel.addEventListener('click', headerSearchCancelHandler)
 
